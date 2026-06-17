@@ -31,7 +31,7 @@ function createWindow() {
     }
   });
 
-  const isDev = process.env.NODE_ENV === 'development';
+  const isDev = !app.isPackaged;
   if (isDev) {
     mainWindow.loadURL('http://localhost:5173');
     // Abre as ferramentas de desenvolvedor apenas no modo de desenvolvimento
