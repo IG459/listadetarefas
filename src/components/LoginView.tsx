@@ -89,7 +89,7 @@ export const LoginView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex bg-slate-100/50 text-slate-800 font-sans">
+    <div className="min-h-screen flex bg-slate-950 text-slate-100 font-sans">
       
       {/* Coluna da Esquerda: Painel Visual Premium (Oculto em telas pequenas) */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/40 p-12 flex-col justify-between relative overflow-hidden border-r border-slate-800/10">
@@ -147,40 +147,40 @@ export const LoginView: React.FC = () => {
       </div>
 
       {/* Coluna da Direita: Formulário de Login/Cadastro/Recuperação (Ocupa 100% no mobile e 50% em telas grandes) */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-slate-100/50">
-        <div className="max-w-md w-full bg-white rounded-2xl border border-slate-200/60 p-8 shadow-xl transition-all duration-300 hover:border-slate-300/60 animate-fadeIn">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-slate-950">
+        <div className="max-w-md w-full bg-slate-900/45 backdrop-blur-md rounded-2xl border border-slate-850 p-8 shadow-2xl transition-all duration-300 hover:border-slate-800/80 animate-fadeIn">
           
           {/* Header/Logo Mobile */}
           <div className="flex flex-col items-center mb-8 lg:hidden">
-            <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 border border-emerald-100 transition-all hover:scale-105 duration-200">
+            <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-4 border border-emerald-500/20 transition-all hover:scale-105 duration-200">
               <CheckSquare className="w-7 h-7" />
             </div>
-            <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">TaskFlow</h1>
-            <p className="text-slate-500 text-sm mt-1">
+            <h1 className="text-3xl font-extrabold text-white tracking-tight">TaskFlow</h1>
+            <p className="text-slate-200 text-sm mt-1">
               {mode === 'signup' ? 'Crie sua conta para começar' : mode === 'forgot' ? 'Recuperação de acesso à conta' : 'Sua lista de tarefas moderna e organizada'}
             </p>
           </div>
 
           <div className="hidden lg:block mb-8">
-            <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-3xl font-extrabold text-white tracking-tight">
               {mode === 'signup' ? 'Criar Conta' : mode === 'forgot' ? 'Recuperar Senha' : 'Fazer Login'}
             </h1>
-            <p className="text-slate-500 text-sm mt-1.5">
+            <p className="text-slate-200 text-sm mt-1.5">
               {mode === 'signup' ? 'Preencha os dados abaixo para se cadastrar' : mode === 'forgot' ? 'Insira seu e-mail para receber um link de redefinição' : 'Insira seus dados para acessar o aplicativo'}
             </p>
           </div>
 
           {/* Mensagens de Sucesso ou Erro */}
           {error && (
-            <div className="mb-6 flex items-start gap-3 bg-rose-50 border border-rose-100 text-rose-700 p-4 rounded-xl text-xs font-medium animate-fadeIn">
-              <AlertCircle className="w-4 h-4 text-rose-550 shrink-0 mt-0.5" />
+            <div className="mb-6 flex items-start gap-3 bg-rose-950/30 border border-rose-900/50 text-rose-200 p-4 rounded-xl text-xs font-medium animate-fadeIn">
+              <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
               <span>{error}</span>
             </div>
           )}
 
           {message && (
-            <div className="mb-6 flex items-start gap-3 bg-emerald-50 border border-emerald-100 text-emerald-700 p-4 rounded-xl text-xs font-medium animate-fadeIn">
-              <CheckCircle2 className="w-4 h-4 text-emerald-550 shrink-0 mt-0.5" />
+            <div className="mb-6 flex items-start gap-3 bg-emerald-950/30 border border-emerald-900/50 text-emerald-200 p-4 rounded-xl text-xs font-medium animate-fadeIn">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <span>{message}</span>
             </div>
           )}
@@ -188,7 +188,7 @@ export const LoginView: React.FC = () => {
           {/* Form */}
           <form onSubmit={handleAuth} className="space-y-5">
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                 Endereço de E-mail
               </label>
               <div className="relative rounded-lg shadow-sm">
@@ -206,7 +206,7 @@ export const LoginView: React.FC = () => {
                     if (error) setError('');
                   }}
                   placeholder="exemplo@email.com"
-                  className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
+                  className="block w-full pl-10 pr-4 py-3 bg-slate-950/50 border border-slate-800 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 disabled:bg-slate-900 disabled:text-slate-600 transition-colors text-sm"
                 />
               </div>
             </div>
@@ -214,7 +214,7 @@ export const LoginView: React.FC = () => {
             {mode !== 'forgot' && (
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <label htmlFor="password" className="block text-sm font-semibold text-slate-700">
+                  <label htmlFor="password" className="block text-sm font-semibold text-white">
                     Senha
                   </label>
                   {mode === 'login' && (
@@ -227,7 +227,7 @@ export const LoginView: React.FC = () => {
                         setError('');
                         setMessage('');
                       }}
-                      className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
+                      className="text-emerald-400 hover:text-emerald-300 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
                     >
                       Esqueceu a senha?
                     </button>
@@ -248,14 +248,14 @@ export const LoginView: React.FC = () => {
                       if (error) setError('');
                     }}
                     placeholder="Mínimo 6 caracteres"
-                    className="block w-full pl-10 pr-10 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
+                    className="block w-full pl-10 pr-10 py-3 bg-slate-950/50 border border-slate-800 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 disabled:bg-slate-900 disabled:text-slate-600 transition-colors text-sm"
                   />
                   <button
                     type="button"
                     tabIndex={-1}
                     disabled={isLoading}
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-650 transition-colors"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-300 transition-colors"
                   >
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
@@ -291,7 +291,7 @@ export const LoginView: React.FC = () => {
                   setError('');
                   setMessage('');
                 }}
-                className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50 flex items-center justify-center gap-1.5 mx-auto"
+                className="text-emerald-400 hover:text-emerald-300 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50 flex items-center justify-center gap-1.5 mx-auto"
               >
                 <ArrowLeft className="w-4 h-4" /> Voltar para o Login
               </button>
@@ -305,14 +305,14 @@ export const LoginView: React.FC = () => {
                   setMessage('');
                   setPassword('');
                 }}
-                className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
+                className="text-emerald-400 hover:text-emerald-300 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
               >
                 {mode === 'login' ? 'Não tem uma conta? Cadastre-se gratuitamente' : 'Já possui uma conta? Faça login'}
               </button>
             )}
           </div>
 
-          <div className="mt-8 text-center text-xs text-slate-500 border-t border-slate-100 pt-6">
+          <div className="mt-8 text-center text-xs text-slate-400 border-t border-slate-800 pt-6">
             Conexão criptografada e protegida com Supabase.
           </div>
         </div>
