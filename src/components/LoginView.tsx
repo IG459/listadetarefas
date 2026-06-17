@@ -89,20 +89,20 @@ export const LoginView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex bg-slate-50 text-slate-850 font-sans">
+    <div className="min-h-screen flex bg-slate-100/50 text-slate-800 font-sans">
       
       {/* Coluna da Esquerda: Painel Visual Premium (Oculto em telas pequenas) */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-900 via-blue-950 to-slate-950 p-12 flex-col justify-between relative overflow-hidden border-r border-slate-250/10">
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/40 p-12 flex-col justify-between relative overflow-hidden border-r border-slate-800/10">
         {/* Glow Effects */}
-        <div className="absolute top-[-10%] right-[-10%] w-96 h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none"></div>
+        <div className="absolute top-[-10%] right-[-10%] w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 rounded-full bg-teal-500/5 blur-3xl pointer-events-none"></div>
         
         {/* Header no Banner */}
         <div className="flex items-center gap-2.5 z-10">
-          <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 border border-blue-500/20 shadow-inner">
+          <div className="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 border border-emerald-500/20 shadow-inner">
             <CheckSquare className="w-5 h-5 animate-pulse" />
           </div>
-          <span className="font-extrabold text-xl tracking-tight text-white bg-clip-text bg-gradient-to-r from-white to-blue-200">TaskFlow</span>
+          <span className="font-extrabold text-xl tracking-tight text-white bg-clip-text bg-gradient-to-r from-white to-emerald-300">TaskFlow</span>
         </div>
 
         {/* Ilustração e Frases de Destaque */}
@@ -112,17 +112,17 @@ export const LoginView: React.FC = () => {
             <div className="flex items-center gap-3 mb-5 border-b border-slate-800 pb-3">
               <div className="w-3 h-3 rounded-full bg-rose-500"></div>
               <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+              <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
               <span className="text-[10px] text-slate-500 font-mono ml-auto">tarefas_iniciais.sh</span>
             </div>
             
             <div className="space-y-3">
               <div className="flex items-center gap-3 p-3 bg-slate-950/70 rounded-xl border border-slate-900">
-                <div className="w-5 h-5 rounded-md bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 text-xs">
+                <div className="w-5 h-5 rounded-md bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xs">
                   ✓
                 </div>
                 <div className="h-2 w-32 bg-slate-700 rounded-full"></div>
-                <div className="h-4 w-12 bg-blue-500/10 text-blue-400 text-[10px] rounded-full flex items-center justify-center ml-auto border border-blue-500/20 font-medium">Alta</div>
+                <div className="h-4 w-12 bg-emerald-500/10 text-emerald-400 text-[10px] rounded-full flex items-center justify-center ml-auto border border-emerald-500/20 font-medium">Alta</div>
               </div>
               <div className="flex items-center gap-3 p-3 bg-slate-950/40 rounded-xl border border-slate-900 opacity-60">
                 <div className="w-5 h-5 rounded-md bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 text-xs"></div>
@@ -135,7 +135,7 @@ export const LoginView: React.FC = () => {
           <h2 className="text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Gerencie suas tarefas de forma inteligente e integrada.
           </h2>
-          <p className="text-blue-100 text-base leading-relaxed">
+          <p className="text-emerald-100/90 text-base leading-relaxed">
             Sua lista de tarefas sincronizada em tempo real com o banco de dados do Supabase. Acesse de onde estiver, no navegador ou aplicativo nativo.
           </p>
         </div>
@@ -147,12 +147,12 @@ export const LoginView: React.FC = () => {
       </div>
 
       {/* Coluna da Direita: Formulário de Login/Cadastro/Recuperação (Ocupa 100% no mobile e 50% em telas grandes) */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-slate-50">
-        <div className="max-w-md w-full bg-white rounded-2xl border border-slate-100 p-8 shadow-xl transition-all duration-300 hover:border-slate-200/80 animate-fadeIn">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-slate-100/50">
+        <div className="max-w-md w-full bg-white rounded-2xl border border-slate-200/60 p-8 shadow-xl transition-all duration-300 hover:border-slate-300/60 animate-fadeIn">
           
           {/* Header/Logo Mobile */}
           <div className="flex flex-col items-center mb-8 lg:hidden">
-            <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4 border border-blue-100 transition-all hover:scale-105 duration-200">
+            <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 border border-emerald-100 transition-all hover:scale-105 duration-200">
               <CheckSquare className="w-7 h-7" />
             </div>
             <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">TaskFlow</h1>
@@ -179,8 +179,8 @@ export const LoginView: React.FC = () => {
           )}
 
           {message && (
-            <div className="mb-6 flex items-start gap-3 bg-blue-50 border border-blue-100 text-blue-700 p-4 rounded-xl text-xs font-medium animate-fadeIn">
-              <CheckCircle2 className="w-4 h-4 text-blue-550 shrink-0 mt-0.5" />
+            <div className="mb-6 flex items-start gap-3 bg-emerald-50 border border-emerald-100 text-emerald-700 p-4 rounded-xl text-xs font-medium animate-fadeIn">
+              <CheckCircle2 className="w-4 h-4 text-emerald-550 shrink-0 mt-0.5" />
               <span>{message}</span>
             </div>
           )}
@@ -206,7 +206,7 @@ export const LoginView: React.FC = () => {
                     if (error) setError('');
                   }}
                   placeholder="exemplo@email.com"
-                  className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
+                  className="block w-full pl-10 pr-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
                 />
               </div>
             </div>
@@ -227,7 +227,7 @@ export const LoginView: React.FC = () => {
                         setError('');
                         setMessage('');
                       }}
-                      className="text-blue-600 hover:text-blue-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
+                      className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
                     >
                       Esqueceu a senha?
                     </button>
@@ -248,7 +248,7 @@ export const LoginView: React.FC = () => {
                       if (error) setError('');
                     }}
                     placeholder="Mínimo 6 caracteres"
-                    className="block w-full pl-10 pr-10 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
+                    className="block w-full pl-10 pr-10 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:bg-white disabled:bg-slate-100 disabled:text-slate-400 transition-colors text-sm shadow-sm"
                   />
                   <button
                     type="button"
@@ -266,7 +266,7 @@ export const LoginView: React.FC = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex items-center justify-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow-lg shadow-blue-500/10 hover:shadow-xl hover:shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 disabled:transform-none disabled:opacity-75 disabled:shadow-none duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-sm cursor-pointer"
+              className="w-full flex items-center justify-center py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-xl shadow-lg shadow-emerald-500/10 hover:shadow-xl hover:shadow-emerald-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 disabled:transform-none disabled:opacity-75 disabled:shadow-none duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 text-sm cursor-pointer"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -291,7 +291,7 @@ export const LoginView: React.FC = () => {
                   setError('');
                   setMessage('');
                 }}
-                className="text-blue-600 hover:text-blue-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50 flex items-center justify-center gap-1.5 mx-auto"
+                className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50 flex items-center justify-center gap-1.5 mx-auto"
               >
                 <ArrowLeft className="w-4 h-4" /> Voltar para o Login
               </button>
@@ -305,7 +305,7 @@ export const LoginView: React.FC = () => {
                   setMessage('');
                   setPassword('');
                 }}
-                className="text-blue-600 hover:text-blue-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
+                className="text-emerald-600 hover:text-emerald-500 text-xs font-semibold hover:underline focus:outline-none disabled:opacity-50"
               >
                 {mode === 'login' ? 'Não tem uma conta? Cadastre-se gratuitamente' : 'Já possui uma conta? Faça login'}
               </button>
